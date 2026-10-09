@@ -231,3 +231,58 @@ if (themeToggle) {
     });
 
 }
+
+
+/* TEJU — Scroll Reveal Animation */
+
+
+/* TEJU — Scroll Reveal Animation */
+
+const extraRevealElements = document.querySelectorAll(
+    '.section, .contact-section .contact-heading, .contact-section .contact-container'
+);
+
+extraRevealElements.forEach((element) => {
+    element.classList.add('reveal');
+});
+
+if ('IntersectionObserver' in window) {
+    const extraRevealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.12 }
+    );
+
+    extraRevealElements.forEach((element) => {
+        extraRevealObserver.observe(element);
+    });
+}
+
+/* CURRENT YEAR */
+
+const yearElement = document.getElementById('currentYear');
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+/* TEJU — CURSOR GLOW */
+
+const cursorGlow = document.getElementById('cursorGlow');
+
+if (
+    cursorGlow &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+) {
+    document.addEventListener('pointermove', (event) => {
+        cursorGlow.style.left = `${event.clientX}px`;
+        cursorGlow.style.top = `${event.clientY}px`;
+    });
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tej | Engineering & Technology</title>
+    <title>Teju | Engineering & Technology</title>
 
     <meta name="description" content="Tej's engineering and technology portfolio featuring telecommunications, software development, and innovative projects.">
 
@@ -14,6 +14,11 @@
 </head>
 
 <body>
+
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-logo">TEJ<span>.</span></div>
+        <div class="intro-line"></div>
+    </div>
 
     <!-- Navigation -->
     <header class="navbar">
@@ -371,7 +376,7 @@
                 </div>
 
                 <h3>TelecomTech</h3>
-
+                        <span class="project-status live">Live Project</span>
                 <p>
                     A telecommunications engineering platform designed
                     around RF analysis, wireless communication, network
@@ -389,7 +394,13 @@
                 </div>
 
 
-                <a href="https://faroimikitejuola.github.io/teju/" class="project-link" target="_blank"></a>
+                
+                <a href="https://faroimikitejuola.github.io/teju/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Explore TelecomTech →
+                </a>
 
             </article>
 
@@ -412,6 +423,8 @@
 
                 <h3>VectorForge</h3>
 
+                <span class="project-status development">In Development</span>
+
                 <p>
                     An image-to-vector application designed to transform
                     raster images into scalable vector graphics.
@@ -428,8 +441,13 @@
                 </div>
 
 
-                <a href="https://faroimikitejuola.github.io/teju/" class="project-link" target="_blank"></a>
-
+                
+                    <a href="YOUR_VECTORFORGE_URL"
+                        class="project-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Explore VectorForge →
+                    </a>
             </article>
 
 
@@ -775,13 +793,27 @@
 
     </section>
     <!-- Footer -->
-    <footer>
+   
 
-        <p>
-            © 2026 Tej. Built with passion and technology.
-        </p>
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#home" class="footer-logo">TEJ<span>.</span></a>
 
+            <p>Engineering ideas into real-world solutions.</p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <p class="footer-copy">
+                © <span id="currentYear"></span> Tej. All rights reserved.
+            </p>
+        </div>
     </footer>
+
 
 
     <script src="script.js"></script>
@@ -792,5 +824,6 @@
         ↑
     </button>
 
+    <div class="cursor-glow" id="cursorGlow"></div>
 </body>
 </html>
