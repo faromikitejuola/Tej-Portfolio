@@ -121,26 +121,24 @@ if (footer) {
 
 }
 
-// ==============================
-// CONTACT FORM
-// ==============================
+
+ // ==============================
+ // CONTACT FORM
+ // ==============================
 
 const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
 
 if (contactForm) {
+    contactForm.addEventListener("submit", function () {
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
 
-    contactForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        formMessage.textContent =
-            "Thanks! Your message is ready to be sent.";
-
-        contactForm.reset();
-
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+        }
     });
-
 }
 
 // ==============================
